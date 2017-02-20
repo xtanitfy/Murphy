@@ -223,8 +223,8 @@ int MnistBuildTrainNet(int batchSize,int h,int w)
 int MnistTrainRun(SIZE_s *pTrainXSize,SIZE_s *pTrainYSize)
 {
 	int ret = -1;
-	//int batchCnt = pTrainXSize->n / netTrainPara.batchsize;
-	int batchCnt = 1;
+	int batchCnt = pTrainXSize->n / netTrainPara.batchsize;
+    //int batchCnt = 1;
 	int xdim = netTrainPara.batchsize * pTrainXSize->h * pTrainXSize->w;
 	int ydim = netTrainPara.batchsize * pTrainYSize->h * pTrainYSize->w;
 	int testCnt = 0;
